@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply p-0 m-0 bg-bg text-color text-[12px] font-sans;
+  // font-family: "Source Sans Pro", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.7s;
+}
+
+a {
+  @apply text-colorPrimary no-underline;
+}
+
+* {
+  @apply box-border;
+}
+
+#__next {
+  @apply m-0 h-screen flex flex-col items-center justify-center text-center;
+}
