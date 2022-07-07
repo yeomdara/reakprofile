@@ -14,7 +14,7 @@
     on: [push]
     jobs:
       build-and-deploy:
-        runs-on: ubuntu-latest
+        runs-on: windows-latest
         defaults:
           run:
             working-directory: ./ # root of nextjs project
@@ -36,7 +36,7 @@
           - run: yarn install
           - run: yarn run build
           - run: yarn run export
-          - run: touch ./out/.nojekyll
+      
             env:
               NODE_AUTH_TOKEN: ${{ secrets.YARN_TOKEN }}
               CI: true
